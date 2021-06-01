@@ -39,7 +39,6 @@ function draw() {
 
 
   }
-    keyPressed();
     drawSprites();
 }
 
@@ -47,7 +46,7 @@ function draw() {
 function keyPressed(){
 
   //For moving and changing animation write code here
-  if(keycode === LEFT_ARROW){
+  if(keyCode === LEFT_ARROW){
       mouse.addAnimation("mouseTeasing",mouse2Image);
       mouse.changeAnimation("mouseTeasing");
       mouse.frameDelay=25;
