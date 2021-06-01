@@ -5,12 +5,12 @@ var bgImg;
 function preload() {
     //load the images here
     bgImg=loadImage("images/garden.png");
-    catImage=loadAnimation("images/cat1.png",);
-    cat3Image=loadAnimation("images/cat4.png",);
-    cat2Image=loadAnimation("images/cat3.png",);
-    mouseImage=loadAnimation("images/mouse2.png",);
-    mouse2Image=loadAnimation("images/mouse3.png",);
-    mouse3Image=loadAnimation("images/mouse1.png",);
+    catImage=loadImage("images/cat1.png");
+    cat2Image=loadImage("images/cat2.png","images/cat3.png");
+    cat3Image=loadImage("images/cat4.png");
+    mouseImage=loadAnimation("images/mouse1.png");
+    mouse2Image=loadAnimation("images/mouse2.png","images/mouse3.png");
+    mouse3Image=loadAnimation("images/mouse4.png");
 }
 
 function setup(){
@@ -27,15 +27,15 @@ function setup(){
 
 function draw() {
  keyPressed();
-    background(255);
+    background(bgImg);
     //Write condition here to evalute if tom and jerry collide
 
   if(cat.x- mouse.x < (cat.width - mouse.width)/2){
-      mouse3.addAnimation("mouseHappy",mouse3Image);
-      mouse3.changeAnimation("mouseHappy");
+      mouse.addAnimation("mouseHappy",mouse3Image);
+      mouse.changeAnimation("mouseHappy");
       cat.velocityX=0;
-       cat3.addAnimation("catHappy",cat3Image);
-       cat3.changeAnimation("catHappy");
+       cat.addAnimation("catHappy",cat3Image);
+       cat.changeAnimation("catHappy");
 
 
   }
@@ -48,13 +48,13 @@ function keyPressed(){
 
   //For moving and changing animation write code here
   if(keycode === LEFT_ARROW){
-      mouse2.addAnimation("mouseTeasing",mouse2Image);
-      mouse2.changeAnimation("mouseTeasing");
-      mouse2.frameDelay=25;
-      cat2.addAnimation("catMoving",cat2Image);
-      cat2.changeAnimation("catMoving");
-      cat2.velocityX=-4;
-      cat2.frameDelay=25;
+      mouse.addAnimation("mouseTeasing",mouse2Image);
+      mouse.changeAnimation("mouseTeasing");
+      mouse.frameDelay=25;
+      cat.addAnimation("catMoving",cat2Image);
+      cat.changeAnimation("catMoving");
+      cat.velocityX=-4;
+      cat.frameDelay=25;
   }
 
 
