@@ -26,7 +26,7 @@ function setup(){
 }
 
 function draw() {
- keyPressed();
+ 
     background(bgImg);
     //Write condition here to evalute if tom and jerry collide
 
