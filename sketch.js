@@ -21,7 +21,7 @@ function setup(){
     cat.addAnimation("cat5",catImage);
     mouse=createSprite(850,400,1,1);
     mouse.addAnimation("mouse5",mouseImage);       
-   
+   //thi is the setip
 
 }
 
