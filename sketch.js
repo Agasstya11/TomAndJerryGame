@@ -17,11 +17,14 @@ function setup(){
     createCanvas(1000,800);
     //create tom and jerry sprites here
     background("bgImg");
-    cat=createSprite(500,400,1,1);
+    cat=createSprite(900,600);
     cat.addAnimation("cat5",catImage);
-    mouse=createSprite(850,400,1,1);
+    mouse=createSprite(200,600);
     mouse.addAnimation("mouse5",mouseImage);       
    //thi is the setip
+   cat.scale=0.2
+      mouse.scale=0.2
+  
 
 }
 
@@ -36,8 +39,9 @@ function draw() {
       cat.velocityX=0;
        cat.addAnimation("catHappy",cat3Image);
        cat.changeAnimation("catHappy");
-
-
+       
+       cat.scale=0.2
+      mouse.scale=0.2
   }
     drawSprites();
 }
